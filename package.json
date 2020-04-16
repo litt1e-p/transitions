@@ -1,9 +1,9 @@
 {
-  "name": "transitions-kit",
+  "name": "@litt1e-p/transitions",
   "version": "0.0.1",
   "description": "animation kits for vue components transition",
   "config": {
-    "libName": "transitionsKit"
+    "libName": "transitions"
   },
   "keywords": [
     "transitions kit",
@@ -15,17 +15,17 @@
   ],
   "author": "litt1e-p",
   "license": "MIT",
-  "main": "dist/transitionsKit.umd.js",
-  "module": "dist/transitionsKit.esm.js",
-  "unpkg": "dist/transitionsKit.min.js",
+  "main": "dist/transitions.umd.js",
+  "module": "dist/transitions.esm.js",
+  "unpkg": "dist/transitions.min.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/litt1e-p/transitionsKit.git"
+    "url": "git+https://github.com/litt1e-p/transitions.git"
   },
   "bugs": {
-    "url": "https://github.com/litt1e-p/transitionsKit/issues"
+    "url": "https://github.com/litt1e-p/transitions/issues"
   },
-  "homepage": "https://github.com/litt1e-p/transitionsKit#readme",
+  "homepage": "https://github.com/litt1e-p/transitions#readme",
   "dependencies": {
     "vue": "^2.6.10"
   }
