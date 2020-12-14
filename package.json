@@ -1,6 +1,6 @@
 {
   "name": "@litt1e-p/transitions",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "animation kits for vue components transition",
   "config": {
     "libName": "transitions"
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/litt1e-p/transitions#readme",
   "dependencies": {
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "core-js": "^3.8.1"
   }
 }
