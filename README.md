@@ -2,6 +2,8 @@
 
 the animation kits for vue components transition
 
+> [vue 3.x supports](https://github.com/litt1e-p/transitions/tree/next)
+
 #### Installation
 
 ```js
