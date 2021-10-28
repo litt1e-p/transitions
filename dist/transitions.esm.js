@@ -1,1 +1,27 @@
-var e={name:"transitions",props:{type:{type:String,default:function(){return String.prototype.constructor()}}},data:function(){return{conf:{slideLeading:"slide-leading",slideTrailing:"slide-trailing",slideTop:"slide-top",slideBottom:"slide-bottom",collapseVertical:"collapse-vertical",collapseHorizonal:"collapse-horizonal",zoom:"zoom",fade:"fade"}}},computed:{effect:{cache:!1,get:function(){var e=Object.keys(this.conf);return this.type&&e.includes(this.type)?this.conf[this.type]:this.conf[e[Math.floor(Math.random()*e.length)]]}}}},t=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"lp-ts__wrapper"},[n("transition",{attrs:{name:e.effect}},[e._t("default")],2)],1)};t._withStripped=!0;var n=function(e,t,n,o,i,r,s,a,d,c){"boolean"!=typeof s&&(d=a,a=s,s=!1);var l,f="function"==typeof n?n.options:n;if(e&&e.render&&(f.render=e.render,f.staticRenderFns=e.staticRenderFns,f._compiled=!0,i&&(f.functional=!0)),o&&(f._scopeId=o),r?(l=function(e){(e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),t&&t.call(this,d(e)),e&&e._registeredComponents&&e._registeredComponents.add(r)},f._ssrRegister=l):t&&(l=s?function(e){t.call(this,c(e,this.$root.$options.shadowRoot))}:function(e){t.call(this,a(e))}),l)if(f.functional){var p=f.render;f.render=function(e,t){return l.call(t),p(e,t)}}else{var u=f.beforeCreate;f.beforeCreate=u?[].concat(u,l):[l]}return n}({render:t,staticRenderFns:[]},undefined,e,"data-v-c1a59c38",!1,undefined,!1,void 0,void 0,void 0),o=[n],i=function(e){o.forEach((function(t){e.component(t.name,t)}))};"undefined"!=typeof window&&window.Vue&&i(window.Vue);export default i;export{n as transitions};
+import { useCssVars as e, unref as t, reactive as a, computed as o, openBlock as n, createElementBlock as s, createVNode as i, Transition as r, withCtx as l, renderSlot as c } from "vue";
+const d = { class: "lp-ts__wrapper" }, f = { name: "transitions" };
+var u = ((e2, t2) => {
+  for (const [a2, o2] of t2)
+    e2[a2] = o2;
+  return e2;
+})(Object.assign(f, { props: { type: { type: String, default: String.prototype.constructor() }, duration: { type: [Number, String], default: 0.25 } }, setup: function(f2) {
+  const u2 = f2;
+  e((e2) => ({ "0d79edd1": t(g) }));
+  const p2 = a({ conf: { slideLeading: { className: "slide-leading", duration: 0.5 }, slideTrailing: { className: "slide-trailing", duration: 0.5 }, slideTop: { className: "slide-top", duration: 0.5 }, slideBottom: { className: "slide-bottom", duration: 0.5 }, collapseVertical: { className: "collapse-vertical", duration: 0.5 }, collapseHorizonal: { className: "collapse-horizonal", duration: 0.5 }, zoom: { className: "zoom", duration: 0.5 }, fade: { className: "fade", duration: 0.25 } }, effect: void 0 }), m2 = o({ get: () => {
+    var _a;
+    return (_a = p2 == null ? void 0 : p2.effect) == null ? void 0 : _a.className;
+  } }), g = o({ get: () => (parseFloat(u2.duration) || p2.effect.duration) + "s" }), N = () => {
+    p2.effect = y();
+  }, y = () => {
+    const e2 = Object.keys(p2.conf);
+    return u2.type && e2.includes(u2.type) ? p2.conf[u2.type] : p2.conf[e2[Math.floor(Math.random() * e2.length)]];
+  };
+  return (e2, a2) => (n(), s("div", d, [i(r, { name: t(m2), onAfterEnter: N }, { default: l(() => [c(e2.$slots, "default", { effect: t(p2).effect }, void 0, true)]), _: 3 }, 8, ["name"])]));
+} }), [["__scopeId", "data-v-c4fb76aa"]]);
+const p = [u], m = function(e2) {
+  p.forEach((t2) => {
+    e2.component(t2.name, t2);
+  });
+};
+typeof window != "undefined" && window.Vue && m(window.Vue);
+export { m as default, u as transitions };

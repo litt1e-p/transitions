@@ -1,4 +1,4 @@
-import transitions from 'components/core';
+import transitions from './lib/index.vue';
 
 const components = [transitions]
 
