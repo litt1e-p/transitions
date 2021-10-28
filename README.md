@@ -17,7 +17,7 @@ npm i @litt1e-p/transitions
 ```js
 // in main.js
 import Transitions from '@litt1e-p/transitions'
-import '@litt1e-p/transitionsKit/dist/transitions.css'
+import '@litt1e-p/transitions/dist/transitions.css'
 
 Vue.use(Transitions)
 ```
