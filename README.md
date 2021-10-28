@@ -2,12 +2,12 @@
 
 the animation kits for vue components transition
 
-> [vue 3.x supports](https://github.com/litt1e-p/transitions/tree/next)
+> [vue 2.x supports](https://github.com/litt1e-p/transitions)
 
 #### Installation
 
 ```js
-npm i @litt1e-p/transitions
+npm i @litt1e-p/transitions@next
 ```
 
 #### Usage
@@ -41,9 +41,19 @@ export default defineComponent({
 
 > eg. use `zoom` transition effect
 
-```js
+```html
 <transitions type="zoom" duration="0.25">
   <component :is="your componet"></component>
+</transitions>
+
+// or
+
+<transitions duration="0.5">
+  <template #default="{effect}">
+    <keep-alive>
+      <component :is="view" :effect="effect"></component>
+    </keep-alive>
+  </template>
 </transitions>
 ```
 
