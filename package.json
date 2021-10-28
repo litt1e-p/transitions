@@ -1,6 +1,6 @@
 {
   "name": "@litt1e-p/transitions",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "animation kits for vue components transition for vue 3.x",
   "config": {
     "libName": "transitions"

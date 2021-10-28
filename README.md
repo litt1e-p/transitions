@@ -17,23 +17,24 @@ npm i @litt1e-p/transitions
 ```js
 // in main.js
 import Transitions from '@litt1e-p/transitions'
-import '@litt1e-p/transitionsKit/dist/transitions.css'
+import '@litt1e-p/transitions/dist/transitions.css'
 
-Vue.use(Transitions)
+
+createApp(App).use(Transitions).mount('#app')
 ```
 
 2. or use as vue component
 
 ```js
 // in your vue file
-import { transitions } from '@litt1e-p/transitions'
+import { Transitions, defineComponent } from '@litt1e-p/transitions'
 
-export default {
+export default defineComponent({
   components: {
-    transitions
+    Transitions
   }
   ...
-}
+})
 ```
 
 3. use in template
@@ -41,7 +42,7 @@ export default {
 > eg. use `zoom` transition effect
 
 ```js
-<transitions type="zoom">
+<transitions type="zoom" duration="0.25">
   <component :is="your componet"></component>
 </transitions>
 ```
@@ -50,7 +51,9 @@ if your does not provide any type, it will apply random effect instead
 
 ### Configuration
 
-all types of effect
+#### type
+
+all types of effect, default is random effect
 
 - collapseHorizonal
 
@@ -83,3 +86,35 @@ all types of effect
 - zoom
 
 ![](./screenshots/zoom.gif) 
+
+
+#### duration
+
+animation duration, default duration(seconds):
+
+```js
+slideLeading: {
+  duration: 0.5
+},
+slideTrailing: {
+  duration: 0.5
+},
+slideTop: {
+  duration: 0.5
+},
+slideBottom: {
+  duration: 0.5
+},
+collapseVertical: {
+  duration: 0.5
+},
+collapseHorizonal: {
+  duration: 0.5
+},
+zoom: {
+  duration: 0.5
+},
+fade: {
+  duration: 0.25
+}
+```
