@@ -20,14 +20,15 @@ import Transitions from '@litt1e-p/transitions'
 import '@litt1e-p/transitions/dist/transitions.css'
 
 
-createApp(App).use(Transitions).mount('#app')
+createApp(App).use(Transitions)
 ```
 
 2. or use as vue component
 
 ```js
 // in your vue file
-import { Transitions, defineComponent } from '@litt1e-p/transitions'
+import { defineComponent } from 'vue'
+import { Transitions } from '@litt1e-p/transitions'
 
 export default defineComponent({
   components: {
