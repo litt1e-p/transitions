@@ -1,6 +1,6 @@
 <template>
   <div class="lp-ts__wrapper">
-    <transition :name="effect">
+    <transition :name="effect" :mode="mode">
       <slot></slot>
     </transition>
   </div>
@@ -13,6 +13,10 @@ export default {
     type: {
       type: String,
       default: () => String.prototype.constructor()
+    },
+    mode: {
+      type: String,
+      default: () => 'out-in'
     }
   },
   data () {

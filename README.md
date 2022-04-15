@@ -50,7 +50,7 @@ if your does not provide any type, it will apply random effect instead
 
 ### Configuration
 
-all types of effect
+#### all types of effect
 
 - collapseHorizonal
 
@@ -83,3 +83,7 @@ all types of effect
 - zoom
 
 ![](./screenshots/zoom.gif) 
+
+#### transition mode customization which default value is `out-in`
+
+[more options](https://vuejs.org/guide/built-ins/transition.html#transition-modes)
