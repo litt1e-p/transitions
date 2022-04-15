@@ -128,4 +128,11 @@ zoom: {
 fade: {
   duration: 0.25
 }
+
+
 ```
+#### mode
+
+transition mode customization which default value is `out-in`
+
+[more options](https://vuejs.org/guide/built-ins/transition.html#transition-modes)

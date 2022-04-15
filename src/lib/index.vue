@@ -1,6 +1,6 @@
 <template>
   <div class="lp-ts__wrapper">
-    <transition :name="effectName" @after-enter="transitionComplete">
+    <transition :name="effectName" :mode="mode" @after-enter="transitionComplete">
       <slot :effect="state.effect"></slot>
     </transition>
   </div>
@@ -26,6 +26,10 @@ const props = defineProps({
   duration: {
     type: [Number, String],
     default: 0.25
+  },
+  mode: {
+    type: String,
+    default: 'out-in'
   }
 })
 
@@ -96,6 +100,7 @@ const effectClosure = () => {
 
 <style lang="scss" scoped>
 .slide-leading-enter-active {
+  // transition: all 0.5s ease;
   transition: all v-bind(_duration) ease;
   
 }
@@ -108,6 +113,7 @@ const effectClosure = () => {
 }
 
 .slide-trailing-enter-active {
+  // transition: all 0.5s ease;
   transition: all v-bind(_duration) ease;
 }
 .slide-trailing-leave-active {
@@ -119,6 +125,7 @@ const effectClosure = () => {
 }
 
 .slide-top-enter-active {
+  // transition: all 0.5s ease;
   transition: all v-bind(_duration) ease;
 }
 .slide-top-leave-active {
@@ -130,6 +137,7 @@ const effectClosure = () => {
 }
 
 .slide-bottom-enter-active {
+  // transition: all 0.5s ease;
   transition: all v-bind(_duration) ease;
 }
 .slide-bottom-leave-active {
@@ -141,6 +149,7 @@ const effectClosure = () => {
 }
 
 .fade-enter-active, .fade-leave-to-active {
+  // transition: opacity 0.25s ease-out;
   transition: opacity v-bind(_duration) ease-out;
 }
 .fade-enter-from, .fade-leave-to {
@@ -148,6 +157,7 @@ const effectClosure = () => {
 }
 
 .collapse-vertical-enter-active {
+  // transition: all 0.5s ease;
   transition: all v-bind(_duration) ease;
 }
 .collapse-vertical-leave-active {
@@ -159,6 +169,7 @@ const effectClosure = () => {
 }
 
 .zoom-enter-active {
+  // transition: all 0.5s ease;
   transition: all v-bind(_duration) ease;
 }
 .zoom-leave-active {
@@ -170,6 +181,7 @@ const effectClosure = () => {
 }
 
 .collapse-horizonal-enter-active {
+  // transition: all 0.5s ease;
   transition: all v-bind(_duration) ease;
 }
 .collapse-horizonal-leave-active {
